@@ -1,10 +1,103 @@
-$color-orange: #3d342a;
+// === variables ====
+$dark: #1e1e1e;
+
+
+$bgColor: #1e1e1e;
+
+@import url('https://fonts.googleapis.com/css?family=Dancing+Script|Raleway');
+
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+body {
+  background: url("../img/restaurant.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  color: #fff;
+}
+
+// ===== grid =====
+.container {
+  display: grid;
+  max-width: 1024px;
+  height: 100%;
+  margin: 0 auto;
+  grid-template-columns: 20rem 1fr;
+  grid-template-rows: 4rem 1fr;
+  grid-template-areas: "welcome nav"
+    " welcome main";
+}
 
 .main {
-  background: $color-orange;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
+  height: 100%;
+}
+
+.welcome {
+  grid-area: welcome;
+}
+
+nav {
+  grid-area: nav;
+  height: 4rem;
+  font-family: 'Raleway', sans-serif;
+
+
+  & ul li {
+    list-style: none;
+    display: inline-block;
+    padding: 1rem;
+    background: $bgColor;
+
+    &:hover {
+      background: #fff;
+      color: $bgColor;
+    }
+
+  }
+
+}
+
+// === homePage ===
+// === typography ===
+.welcome {
+  background-color: $bgColor;
+  height: 100vh;
+  margin-top: -1rem;
+
+  & h1 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 2.5rem;
+    text-align: center;
+    padding: 1rem;
+  }
+
+  & h3,
+  & p {
+    font-family: 'Raleway', sans-serif;
+    text-align: center;
+    padding: 0.8rem;
+  }
+
+  hr {
+    width: 70%;
+  }
+}
+
+.main {
+  display: grid;
+
+  & h1 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 2.5rem;
+    text-align: center;
+    padding: .5rem;
+    //background: rgba(255, 255, 255, 0.5);
+    align-self: center;
+    justify-self: end;
+  }
 }
