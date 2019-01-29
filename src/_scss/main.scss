@@ -1,7 +1,5 @@
 // === variables ====
 $dark: #1e1e1e;
-
-
 $bgColor: #1e1e1e;
 
 @import url('https://fonts.googleapis.com/css?family=Dancing+Script|Raleway');
@@ -54,13 +52,13 @@ nav {
     list-style: none;
     display: inline-block;
     padding: 1rem;
-    background: #fff;
+    background: #ccc;
     color: #1e1e1e;
+    transition: all .3s ease-in-out;
+
 
     &:hover,
     &.active {
-      // background: #fff;
-      // color: $bgColor;
       background: #1e1e1e;
       color: #fff;
     }
@@ -123,7 +121,6 @@ nav {
     font-size: 2.5rem;
     text-align: center;
     padding: .5rem;
-
     align-self: center;
     justify-self: end;
   }
@@ -131,6 +128,7 @@ nav {
   p {
     width: 80%;
     margin: 2rem auto;
+    line-height: 1.5rem;
   }
 }
 

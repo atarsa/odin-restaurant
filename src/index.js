@@ -13,9 +13,17 @@ const mainDiv = document.querySelector('.main');
 mainDiv.appendChild(aboutTab());
 
 // add Event Listener to navigation
+let navElms = document.querySelectorAll('nav ul li');
+navElms = Array.from(navElms);
+
 const nav = document.querySelector('nav');
-nav.addEventListener('click', function(e){
-  // clear previous 
+
+nav.addEventListener("click", function(e){
+  // remove 'active' class from all elements
+  for (let elm of navElms){
+    elm.classList.remove('active');
+  }
+    // clear previous 
   mainDiv.innerHTML = '';
   console.log(e.target.innerText)
   if(e.target.innerText == 'About'){
@@ -30,5 +38,7 @@ nav.addEventListener('click', function(e){
       mainDiv.appendChild(contactTab());
       
   }
-  e.target.classList.toggle('active');
+  e.target.classList.add('active');
 })
+
+
