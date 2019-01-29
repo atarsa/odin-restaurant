@@ -29,6 +29,15 @@ body {
   grid-template-rows: 4rem 1fr;
   grid-template-areas: "welcome nav"
     " welcome main";
+
+  @media (max-width: 660px) {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas:
+      "nav"
+      "main"
+      "welcome";
+  }
 }
 
 .main {
@@ -51,7 +60,7 @@ nav {
   & ul li {
     list-style: none;
     display: inline-block;
-    padding: 1rem;
+    padding: 0.9rem 1rem;
     background: #ccc;
     color: #1e1e1e;
     transition: all .3s ease-in-out;
